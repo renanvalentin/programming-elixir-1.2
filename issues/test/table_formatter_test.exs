@@ -36,10 +36,10 @@ defmodule TableFormatterTest do
   end
 
   test "Output is correct" do
-  #    result = capture_io fn ->
+    result = capture_io fn ->
       TF.print_table_for_columns(simple_test_data, headers)
-      # end
-result = []
+    end
+    
     assert result == """
     c1    | c2     | c4     
     ------+--------+--------

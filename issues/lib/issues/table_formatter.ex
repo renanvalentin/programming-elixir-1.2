@@ -38,16 +38,10 @@ defmodule Issues.TableFormatter do
   end
 
   def puts_in_columns(data_by_columns, format) do
-    IO.inspect format
-    IO.inspect data_by_columns
     data_by_columns
-    |> IO.inspect
     |> List.zip
-    |> IO.inspect
     |> map(&Tuple.to_list/1)
-    |> IO.inspect
     |> each(&puts_one_line_in_columns(&1, format))
-    |> IO.inspect
   end
 
   def puts_one_line_in_columns(fields, format) do

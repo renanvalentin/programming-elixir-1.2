@@ -1,6 +1,7 @@
 # Solution by Dmitry Nesteryuk
 defmodule Anagram do
   def anagram?(word1, word2) do
+      IO.puts word_vector(word1) - word_vector(word2)
       word_vector(word1) == word_vector(word2)
   end
 
